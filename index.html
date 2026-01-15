@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="w-full flex items-center place-content-between p-5 py-3 sticky top-0 z-[100] bg-white mt-10">
+        <div class="flex items-center">
+            <img class="w-40 md:w-52 h-10" src="images/logo-DI70FIGN.jpg" alt="logo">
+        </div>
+        <ul class="hidden md:flex gap-10 font-bold cursor-pointer items-center">
+            <li class="hover:bg-green-400 hover:text-white rounded-xl p-2">HOME</li>
+            <li class="hover:bg-green-400 hover:text-white rounded-xl p-2">OUR STORE</li>
+            <li class="hover:bg-green-400 hover:text-white rounded-xl p-2">CAREER</li>
+            <li class="hover:bg-green-400 hover:text-white rounded-xl p-2">ABOUT US</li>
+            <li class="hover:bg-green-400 hover:text-white rounded-xl p-2">CONTANT</li>
+        </ul>
+        <div class="flex cursor-pointer items-center text-xl md:gap-5">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-heart"></i>
+            <div class="relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="absolute -top-2 -right-1 bg-green-500 text-white text-[8px] font-bold px-1 rounded">
+                    0
+                </span>
+            </div>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col md:flex-row gap-5">
+        <aside class="w-full md:w-[20%] bg-white px-5 py-6 md:ml-10 md:mt-5">
+            <div class="md:ml-20 md:mt-10 "> <!-- fixed top-[80px] -->
+                <div class="text-xl font-bold cursor-pointer mb-4">Widget Price Filter</div>
+
+                <div class="relative w-full h-2 bg-green-300 rounded-full mb-6">
+                    <span class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-green-500 rounded-full"></span>
+                    <span class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-green-500 rounded-full"></span>
+                </div>
+
+                <div class="flex justify-between items-center mb-5">
+                    <p class="text-gray-500 text-sm">Price:$0 - $100</p>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">Filter
+                        Price</button>
+                </div>
+                <!-- <div class="w-[100%] h-0.5 bg-gray-500 mt-5"></div> -->
+                <hr class="mb-5 mt-5">
+
+                <div class="text-lg font-bold mb-4">Product Category</div>
+                <div class="space-y-4 text-sm">
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>All Category</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Calbee Frugra</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Matcha Green Tea</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Baby Collecction</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Healthcare Products</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Okamoto Condom & Lubrican</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Snacks & Confectionaries</span>
+                    </label>
+                </div>
+
+                <hr class="mb-5 mt-5">
+
+                <div class="space-y-3 mt-4">
+                    <h1 class="font-bold text-xl cursor-pointer">Product Status</h1>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Both</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>In Stock</span>
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input type="checkbox" class="w-4 h-4 accent-green-500 rounded">
+                        <span>Out of Stock</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <div class="w-full md:w-[80%] mr-20 grid px-5 py-6 md:ml-10 md:mt-5">
+            <h1 class="font-bold text-2xl text-black">All Category</h1>
+            <div class="bg-gray-200 md:w-full h-300 rounded-xl mt-5 p-5">
+                <div class="place-content-between flex">
+                    <div class="relative w-[70%]">
+                        <div
+                            class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="search" name="search"
+                            class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl placeholder:text-slate-400"
+                            placeholder="Search products..." />
+                    </div>
+                    <button
+                        class="bg-green-400 md:mr-5 rounded-xl py-3 pl-5 pr-5 cursor-pointer text-white font-bold">Search</button>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center md:place-content-between ">
+                    <div class="flex gap-5 mt-5 items-center">
+                        <p class="text-gray-700">Shot By:</p>
+                        <select class="border rounded-md p-2 ">
+                            <option value="option1">Default (By ID)</option>
+                            <option value="option2">Name</option>
+                        </select>
+                    </div>
+                    <p class="mt-5">Showing <span class="text-green-600">30</span> of 30 products</p>
+                </div>
+            </div>
+            <!-- Items -->
+            <div class="md:place-content-between">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/calbee.jpg" alt="potato">
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Calbee Frugra Fruit & Granula</h1>
+                        <p class="mt-2 text-green-500 text-lg">$15.00</p>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/pota.webp" alt="potato">
+                        <span
+                            class="absolute top-6 right-6 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                            -69%
+                        </span>
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">potato fries snack(Original Flavor)</h1>
+                        <div class="flex gap-3 mt-2">
+                            <p class="text-green-500 text-xl">$2.02</p>
+                            <p class="text-gray-400 mt-1 line-through">$6.50</p>
+                        </div>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/potato1.jpg" alt="potato">
+                        <span
+                            class="absolute top-6 right-10 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                            -69%
+                        </span>
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500 ">potato fries snack(Nori Seaweed Flavor)</h1>
+                        <p class="mt-2 text-green-500 text-lg">$15.00</p>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/oi ocha hojicha tea.jpg"
+                            alt="potato">
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Calbee Frugra Fruit & Granula</h1>
+                        <p class="mt-2 text-green-500 text-lg">$15.00</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/oi ocah green tea.jpg"
+                            alt="oi ocah green tea">
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Oi Ocha Green Tea Bags</h1>
+                        <p class="mt-2 text-green-500 text-lg">$23.95</p>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <div class="opacity-45">
+                            <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/oti_en_matcha.png"
+                                alt="oti_en_matcha">
+                            <span
+                                class="absolute top-6 right-6 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                                Out Of Stock
+                            </span>
+                        </div>
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Ito En Matcha Green Tea-Original Powder</h1>
+                        <div class="flex gap-3 mt-2">
+                            <p class="text-green-500 text-xl">$25.20</p>
+                            <p class="text-gray-400 mt-1 line-through">$28.00</p>
+                        </div>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <div>
+                            <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/ito_en.webp" alt="ito_en">
+                            <span
+                                class="absolute top-6 right-10 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                                -50%
+                            </span>
+                        </div>
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500 ">Ito En Hojicha</h1>
+                        <div class="flex gap-3 mt-2">
+                            <p class="text-green-500 text-xl">$4.00</p>
+                            <p class="text-gray-400 mt-1 line-through">$8.00</p>
+                        </div>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/sweet_matcha.jpg" alt="potato">
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Sweet Matcha Sticks</h1>
+                        <div class="flex gap-3 mt-2">
+                            <p class="text-green-500 text-xl">$27.84</p>
+                            <p class="text-gray-400 mt-1 line-through">$34.80</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/heat_patch.jpg"
+                            alt="heat_patch">
+                        <span
+                            class="absolute top-6 right-6 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                            -22%
+                        </span>
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Heat Patch Neck & Shoulder 2Pcs</h1>
+                        <div class="flex gap-3 mt-2">
+                            <p class="text-green-500 text-xl">$17.00</p>
+                            <p class="text-gray-400 mt-1 line-through">$24.45</p>
+                        </div>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <div class="opacity-45">
+                            <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/pain-relief.jpg"
+                                alt="pain-relief">
+                            <span
+                                class="absolute top-6 right-6 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                                -Out Of Stock%
+                            </span>
+                        </div>
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-gray-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Pain Relief</h1>
+                        <div class="flex gap-3 mt-2">
+                            <p class="text-green-500 text-xl">$25.20</p>
+                            <p class="text-gray-400 mt-1 line-through">$31.50</p>
+                        </div>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/okamoto.jpg" alt="okamoto">
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500 ">Okamoto 033 Platinum Condom</h1>
+                        <p class="mt-2 text-green-500 text-lg">$25.00</p>
+                    </div>
+                    <div class="relative max-w-[300px]">
+                        <img class="border mt-5 w-50 h-72 object-cover p-5" src="images/bourbon.jpg" alt="bourbon">
+                        <div class="flex space-x-1 mt-3">
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                            <i class="fa-solid fa-star text-yellow-400 w-4 h-4"></i>
+                        </div>
+                        <h1 class="mt-2 text-lg hover:text-green-500">Bourbon Salt Canramel Cookies</h1>
+                        <p class="mt-2 text-green-500 text-lg">$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full mt-5 bg-gray-200 px-3 py-6 ">
+        <div class="grid grid-cols-1 md:flex md:grid-cols-6 gap-10 p-8 justify-center">
+            <div class="md:w-[14%] flex flex-col items-start space-y-5">
+                <img class="w-48 md:w-56" src="images/logo-DI70FIGN.jpg" alt="">
+                <p class="text-gray-500 leading-relaxed text-sm md:text-base">The Group Focuses Exclusively On Quality And Service With A Well Dedicated
+                    Team Ensuring Timely Deliveries All Across The GCC.</p>
+                <img class="size-[150px] h-[100px]" src="images/haccp.jpg" alt="">
+            </div>
+            <div class="md:w-[14%] flex flex-col items-start space-y-5">
+                <h1 class="text-xl">CONTACT INFORMATION</h1>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-phone bg-green-300 text-white text-2xl rounded"></i>
+                    <p class="text-lg text-gray-500">+885 964 022 342</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-regular fa-message bg-green-300 text-white text-2xl rounded"></i>
+                    <p class="text-lg text-gray-500">sales@gmail.com</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-regular fa-message bg-green-300 text-white text-2xl rounded"></i>
+                    <p class="text-lg text-gray-500">services@gmail.com</p>
+                </div>
+            </div>
+            <div class="md:w-[14%] flex flex-col items-start space-y-5">
+                <h1 class="text-xl">QUICK LINKS</h1>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-regular fa-user bg-green-300 text-white text-2xl rounded"></i>
+                    <p class="text-lg text-gray-500">My Account</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-regular fa-heart bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Wishlist</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-trademark bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Track My Order</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-location bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Location</p>
+                </div>
+            </div>
+            <div class="md:w-[14%] flex flex-col items-start space-y-5">
+                <h1 class="text-xl">USEFUL LINKS</h1>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-house bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">About Company</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-calendar-days bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Careers</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-address-book bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Contact Us</p>
+                </div>
+            </div>
+            <div class="md:w-[14%] flex flex-col items-start space-y-5">
+                <h1 class="text-xl">PRIVACY POLICY</h1>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-cookie bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Cookies</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-shop bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Terms & Conditions</p>
+                </div>
+                <div class="flex items-center gap-4 mt-3">
+                    <i class="fa-solid fa-calender bg-green-300 text-2xl text-white rounded"></i>
+                    <p class="text-lg text-gray-500">Privacy Policy</p>
+                </div>
+            </div>
+            <div class="md:w-[14%] flex flex-col items-start space-y-5">
+                <h1 class="text-xl">PAYMENT METHODS</h1>
+                <div class="flex">
+                    <img class="w-[60px]" src="images/visa-BxZtfdl4.jpg" alt="">
+                    <img class="w-[60px]" src="images/master-l04n8YAj.jpg" alt="">
+                    <img class="w-[60px]" src="images/americanExpress-DAtHEAtZ.jpg" alt="">
+                    <img class="w-[60px]" src="images/paypal-C_V1Ks9Z.jpg" alt="">
+                </div>
+                <h1 class="text-xl">FOLLOW US</h1>
+                <div class="flex gap-3 mt-5">
+                    <i class="text-2xl fa-brands fa-facebook bg-green-300 text-white rounded"></i>
+                    <i class="text-2xl fa-brands fa-square-instagram bg-green-300 text-white rounded"></i>
+                    <i class="text-2xl fa-brands fa-telegram bg-green-300 text-white rounded"></i>
+                    <i class="text-2xl fa-brands fa-youtube bg-green-300 text-white rounded"></i>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="w-full h-0.5 bg-gray-400 mt-1"></div>
+            <p class="py-5 text-center text-gray-500">Copyright ©2026 Company Name. All Rights Reserved .</p>
+        </div>
+    </div>
+</body>
+
+</html>
